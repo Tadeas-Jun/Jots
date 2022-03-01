@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The background of the Theme Previews. Has a stroke displaying the Theme's toolbar color and rounded corners. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?attr/appBackgroundColor"/>
+    <corners android:radius="5dp"/>
+    <stroke android:color="?attr/colorPrimaryVariant" android:width="2dp"/>
+</shape>

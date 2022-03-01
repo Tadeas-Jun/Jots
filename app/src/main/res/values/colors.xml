@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#FFE6E6E6</color>
+
+    <color name="dark_grey">#101010</color>
+    <color name="white_tint">#FAFAFA</color>
+
+    <!-- region ELEDRIS COLORS -->
+    <color name="eledris_grey">#2D2C2C</color>
+    <color name="eledris_white">#C8C8C8</color>
+    <color name="eledris_dark">#1F1F1F</color>
+    <color name="eledris_orange">#FF652F</color>
+    <!-- endregion ELEDRIS COLORS -->
+
+    <!-- region DEFAULT THEME COLOR VARIATIONS -->
+    <color name="rose">#EF534F</color>
+    <color name="ripe_lemon">#FFEE58</color>
+    <color name="clear_lake">#29B6F6</color>
+    <color name="deep_sea">#3949AB</color>
+    <color name="olivine">#C8F2BC</color>
+    <color name="rose_quartz">#F7CAC9</color>
+    <color name="moss">#3F5A35</color>
+    <color name="crystal">#986F9B</color>
+    <color name="flames">#F59707</color>
+    <!-- endregion DEFAULT THEME COLOR VARIATIONS -->
+
+    <!-- region MOONLIGHT COLORS -->
+    <color name="moonlight_dark">#00020F</color>
+    <color name="moonlight_light">#CEDBEB</color>
+    <!-- endregion MOONLIGHT COLORS -->
+
+    <color name="paper_white">#EDEDE8</color>
+    <color name="pen_black">#383B3E</color>
+    <color name="old_newspaper">#F7F3ED</color>
+    <color name="daydream">#F3F9F8</color>
+    <color name="space_invaders_green">#33FF00</color>
+
+</resources>

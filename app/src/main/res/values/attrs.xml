@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- region COLORS -->
+    <attr name="appBackgroundColor" format="reference|color" />
+    <attr name="mainFontColor" format="reference|color" />
+    <attr name="drawerForegroundColor" format="reference|color" />
+    <attr name="drawerBackgroundColor" format="reference|color" />
+    <attr name="statusBarColor" format="reference|color" />
+    <attr name="toolbarBackgroundColor" format="reference|color" />
+    <attr name="toolbarIconColor" format="reference|color" />
+    <attr name="textHighlightColor" format="reference|color" />
+    <attr name="editTextHintColor" format="reference|color" />
+
+    <attr name="formatBarColor" format="reference|color" />
+    <attr name="formatBarIconsColor" format="reference|color" />
+
+    <attr name="headingColor" format="reference|color" />
+    <attr name="toggledSwitchColor" format="reference|color" />
+    <!-- endregion COLORS -->
+
+    <!-- region THEMES -->
+    <attr name="themeTitle" format="reference|string" />
+    <attr name="themeDescription" format="reference|string" />
+    <attr name="themeIdAttr" format="reference|string" />
+    <attr name="themeIdSku" format="reference|string" />
+    <!-- endregion THEMES -->
+
+    <!-- region FONTS -->
+    <attr name="titleFontFamily" format="reference|string" />
+    <attr name="headingFontFamily" format="reference|string" />
+    <!-- endregion FONTS -->
+
+    <!-- region TEXT SIZES -->
+    <attr name="paragraphTextSize" format="reference|dimension" />
+    <attr name="headingTextSize" format="reference|dimension" />
+    <attr name="titleTextSize" format="reference|dimension" />
+    <attr name="notePreviewTitleTextSize" format="reference|dimension" />
+    <attr name="contextualHeadingTextSize" format="reference|dimension" />
+    <attr name="alertDialogTitleTextSize" format="reference|dimension" />
+    <attr name="smallTextSize" format="reference|dimension" />
+    <!-- endregion TEXT SIZES -->
+
+</resources>

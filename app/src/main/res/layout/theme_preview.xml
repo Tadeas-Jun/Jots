@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The preview of a Theme, used in the Theme Store. It displays the Theme's name, description, font, text color, text size, background color, and toolbar color. -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Jots.ThemePreview"
+    >
+
+        <!-- The Theme's title and a showcase of the Heading text. -->
+        <TextView
+            style="@style/Jots.Text.Heading"
+            android:gravity="start"
+            android:paddingBottom="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="?attr/themeTitle"
+            android:id="@+id/preview_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- The THeme's description and a showcase of the normal text. -->
+        <TextView
+            style="@style/Jots.Text"
+            app:layout_constraintTop_toBottomOf="@id/preview_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="?attr/themeDescription"
+            android:id="@+id/preview_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- The Unlocked status icon, displaying if this theme is currently active. -->
+        <ImageView
+            style="@style/Jots.ThemeStatusIcon"
+            android:contentDescription="@string/themestore_checkmarkicon_description"
+            android:id="@+id/theme_selected"
+            android:background="@drawable/ic_baseline_check_24"
+            tools:ignore="MissingConstraints" />
+
+        <!-- The Locked status icon, displaying if this theme isn't unlocked yet. -->
+        <ImageView
+            style="@style/Jots.ThemeStatusIcon"
+            android:contentDescription="@string/themestore_padlockicon_description"
+            android:id="@+id/theme_locked"
+            android:background="@drawable/ic_baseline_lock_24"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

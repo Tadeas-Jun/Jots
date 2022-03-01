@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AboutFragment">
+
+    <!-- The container for all the content of the fragment. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- The Settings title. -->
+        <TextView
+            android:id="@+id/settings_title"
+            style="@style/Jots.Text.Heading"
+            android:layout_marginTop="30dp"
+            android:text="@string/settings_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- The Dropdown menu for selecting Date formats. -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/settings_dateformat_menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settings_title"
+            style="@style/Jots.DropdownMenu"
+            android:hint="@string/settings_dateformat">
+
+            <!-- Checked the screen via Accessibility Scanner, the Low Contrast warning seems to be a false positive. -->
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/settings_dateformat_textview"
+                style="@style/Jots.DropdownMenu.AutoComplete"
+                tools:ignore="TextContrastCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- The Switch button for showing/hiding hints in an empty note. -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/settings_switch_hints"
+            style="@style/Jots.SwitchButton"
+            app:layout_constraintTop_toBottomOf="@id/settings_dateformat_menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/settings_hints"
+            android:layout_marginTop="30dp"
+            />
+
+        <!-- The Switch button for showing the divider below the note title. -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/settings_switch_divider"
+            style="@style/Jots.SwitchButton"
+            app:layout_constraintTop_toBottomOf="@id/settings_switch_hints"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/settings_titledivider"
+            android:layout_marginTop="15dp"
+            />
+
+        <!-- The Switch button for hiding the toolbar title when in a note. -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/settings_switch_toolbar"
+            style="@style/Jots.SwitchButton"
+            app:layout_constraintTop_toBottomOf="@id/settings_switch_divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/settings_hidetoolbar"
+            android:layout_marginTop="15dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

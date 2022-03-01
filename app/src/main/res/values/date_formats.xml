@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Date formats loaded into the Settings. -->
+    <string-array name="date_formats">
+
+        <item>dd-MM-yyyy hh:mm</item>
+        <item>MM-dd-yyyy hh:mm</item>
+        <item>dd. MM. yyyy hh:mm</item>
+        <item>dd/MM/yyyy hh:mm</item>
+        <item>MM/dd/yyyy hh:mm</item>
+
+    </string-array>
+
+</resources>

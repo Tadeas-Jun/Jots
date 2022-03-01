@@ -1,0 +1,4 @@
+<!-- One item in a Dropdown menu - used in the Settings while choosing a Date format. -->
+<TextView
+    style="@style/Jots.DropdownMenu.Item"
+    />

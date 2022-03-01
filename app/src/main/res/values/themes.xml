@@ -1,0 +1,443 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+    By default, the primary color is used for:
+        the main text color,
+        the icons and text in the side menu drawer,
+        the heading text color,
+        the icons in the formatting bar (70% opacity),
+        the date color in the notes preview (70% opacity).
+
+    By default, the primary color variant is used for:
+        the phone's status bar,
+        the app's toolbar background.
+
+    By default, the secondary color is used for:
+        the app's background,
+        the background of the side menu drawer,
+        the app's title in the toolbar,
+        the toolbar icons.
+
+    By default, the secondary color variant is used for:
+        the text highlight color,
+        the formatting bar color (70% opacity),
+        the edit text input field hint text color.
+
+    -->
+
+    <!-- The main parent theme - all other themes inherit all attributes from this one, unless specified otherwise. -->
+    <style name="Theme.Jots" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="themeIdAttr">@string/theme_default_id</item>
+
+        <item name="themeTitle">@string/theme_default_title</item>
+        <item name="themeDescription">@string/theme_default_description</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="paragraphTextSize">16sp</item>
+        <item name="headingTextSize">22sp</item>
+        <item name="titleTextSize">24sp</item>
+        <item name="notePreviewTitleTextSize">20sp</item>
+        <item name="contextualHeadingTextSize">18sp</item>
+        <item name="alertDialogTitleTextSize">20sp</item>
+        <item name="smallTextSize">12sp</item>
+
+        <item name="appBackgroundColor">?attr/colorSecondary</item>
+        <item name="drawerForegroundColor">?attr/colorPrimary</item>
+        <item name="statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="toolbarBackgroundColor">?attr/colorPrimaryVariant</item>
+        <item name="drawerBackgroundColor">?attr/colorSecondary</item>
+
+        <item name="titleTextColor">?attr/colorSecondary</item>
+        <item name="toolbarIconColor">?attr/colorSecondary</item>
+        <item name="actionMenuTextColor">?attr/titleTextColor</item>
+        <item name="colorControlNormal">?attr/toolbarIconColor</item>
+
+        <item name="fontFamily">@font/raleway_light</item>
+        <item name="titleFontFamily">?attr/fontFamily</item>
+        <item name="headingFontFamily">?attr/fontFamily</item>
+        <item name="mainFontColor">?attr/colorPrimary</item>
+        <item name="textHighlightColor">?attr/colorSecondaryVariant</item>
+        <item name="editTextHintColor">?attr/colorSecondaryVariant</item>
+        <item name="formatBarColor">?attr/colorSecondaryVariant</item>
+        <item name="formatBarIconsColor">?attr/colorPrimary</item>
+
+        <item name="android:windowBackground">?attr/appBackgroundColor</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/statusBarColor</item>
+        <item name="android:textColorHighlight">?attr/textHighlightColor</item>
+        <item name="itemTextColor">?attr/drawerForegroundColor</item>
+        <item name="itemIconTint">?attr/drawerForegroundColor</item>
+        <item name="itemBackground">?attr/drawerBackgroundColor</item>
+        <item name="headingColor">?attr/colorPrimary</item>
+        <item name="toggledSwitchColor">?attr/headingColor</item>
+
+        <item name="materialAlertDialogTheme">@style/Jots.AlertDialog</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/Jots.AlertDialog</item>
+
+        <item name="textAppearanceSubtitle1">@style/Jots.Text</item>
+
+    </style>
+
+    <!-- The Bold theme - same as Default, but with a bolder version of the font. -->
+    <style name="Theme.Jots.Bold" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_bold_id</item>
+
+        <item name="themeTitle">@string/theme_bold_title</item>
+        <item name="themeDescription">@string/theme_bold_description</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="fontFamily">@font/raleway_medium</item>
+
+    </style>
+
+    <!-- The Gloom theme - mostly same as Default, but the colors are inverted. -->
+    <style name="Theme.Jots.Gloom" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_gloom_id</item>
+
+        <item name="themeTitle">@string/theme_gloom_title</item>
+        <item name="themeDescription">@string/theme_gloom_description</item>
+
+        <item name="colorPrimary">@color/white_tint</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+
+        <item name="colorSecondary">@color/dark_grey</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="titleTextColor">?attr/colorPrimary</item>
+        <item name="toolbarIconColor">?attr/colorPrimary</item>
+        <item name="formatBarColor">?attr/colorSecondary</item>
+
+    </style>
+
+    <!-- The Eledris theme - matching the Eledris and Art Prompts projects. -->
+    <style name="Theme.Jots.Eledris" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_eledris_id</item>
+
+        <item name="themeTitle">@string/theme_eledris_title</item>
+        <item name="themeDescription">@string/theme_eledris_description</item>
+
+        <item name="colorPrimary">@color/eledris_white</item>
+        <item name="colorPrimaryVariant">@color/eledris_dark</item>
+
+        <item name="colorSecondary">@color/eledris_grey</item>
+        <item name="colorSecondaryVariant">@color/eledris_white</item>
+
+        <item name="titleTextColor">@color/eledris_orange</item>
+        <item name="titleFontFamily">@font/slabo</item>
+        <item name="headingFontFamily">@font/slabo</item>
+        <item name="headingColor">@color/eledris_orange</item>
+
+        <item name="toolbarIconColor">?attr/colorPrimary</item>
+        <item name="formatBarColor">?attr/colorPrimaryVariant</item>
+
+        <item name="contextualHeadingTextSize">22sp</item>
+
+    </style>
+
+    <!-- The Rose theme - same as Default except a red toolbar. -->
+    <style name="Theme.Jots.Rose" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_rose_id</item>
+        <item name="themeIdSku">@string/theme_rose_sku</item>
+
+        <item name="themeTitle">@string/theme_rose_title</item>
+        <item name="themeDescription">@string/theme_rose_description</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/rose</item>
+
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="titleTextColor">?attr/colorPrimary</item>
+
+    </style>
+
+    <!-- The Ripe Lemon theme - same as Default except a yellow toolbar. -->
+    <style name="Theme.Jots.RipeLemon" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_ripelemon_id</item>
+        <item name="themeIdSku">@string/theme_ripelemon_sku</item>
+
+        <item name="themeTitle">@string/theme_ripelemon_title</item>
+        <item name="themeDescription">@string/theme_ripelemon_description</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/ripe_lemon</item>
+
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="titleTextColor">?attr/colorPrimary</item>
+
+    </style>
+
+    <!-- The Clear Lake theme - same as Default except a light blue toolbar. -->
+    <style name="Theme.Jots.ClearLake" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_clearlake_id</item>
+        <item name="themeIdSku">@string/theme_clearlake_sku</item>
+
+        <item name="themeTitle">@string/theme_clearlake_title</item>
+        <item name="themeDescription">@string/theme_clearlake_description</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/clear_lake</item>
+
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="titleTextColor">?attr/colorPrimary</item>
+
+    </style>
+
+    <!-- The Deep Sea theme - same as Default except a dark blue toolbar. -->
+    <style name="Theme.Jots.DeepSea" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_deepsea_id</item>
+        <item name="themeIdSku">@string/theme_deepsea_sku</item>
+
+        <item name="themeTitle">@string/theme_deepsea_title</item>
+        <item name="themeDescription">@string/theme_deepsea_description</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/deep_sea</item>
+
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+    </style>
+
+    <!-- The Olivine theme - same as Default except a light green toolbar. -->
+    <style name="Theme.Jots.Olivine" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_olivine_id</item>
+        <item name="themeIdSku">@string/theme_olivine_sku</item>
+
+        <item name="themeTitle">@string/theme_olivine_title</item>
+        <item name="themeDescription">@string/theme_olivine_description</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/olivine</item>
+
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="titleTextColor">?attr/colorPrimary</item>
+
+    </style>
+
+    <!-- The Rose Quartz theme - same as Default except a pink toolbar. -->
+    <style name="Theme.Jots.RoseQuartz" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_rosequartz_id</item>
+        <item name="themeIdSku">@string/theme_rosequartz_sku</item>
+
+        <item name="themeTitle">@string/theme_rosequartz_title</item>
+        <item name="themeDescription">@string/theme_rosequartz_description</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/rose_quartz</item>
+
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="titleTextColor">?attr/colorPrimary</item>
+
+    </style>
+
+    <!-- The Moss theme - same as Default except a dark green toolbar. -->
+    <style name="Theme.Jots.Moss" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_moss_id</item>
+        <item name="themeIdSku">@string/theme_moss_sku</item>
+
+        <item name="themeTitle">@string/theme_moss_title</item>
+        <item name="themeDescription">@string/theme_moss_description</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/moss</item>
+
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+    </style>
+
+    <!-- The Crystal theme - same as Default except a purple toolbar. -->
+    <style name="Theme.Jots.Crystal" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_crystal_id</item>
+        <item name="themeIdSku">@string/theme_crystal_sku</item>
+
+        <item name="themeTitle">@string/theme_crystal_title</item>
+        <item name="themeDescription">@string/theme_crystal_description</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/crystal</item>
+
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="titleTextColor">?attr/colorPrimary</item>
+
+    </style>
+
+    <!-- The Flames theme - same as Default except an orange toolbar. -->
+    <style name="Theme.Jots.Flames" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_flames_id</item>
+        <item name="themeIdSku">@string/theme_flames_sku</item>
+
+        <item name="themeTitle">@string/theme_flames_title</item>
+        <item name="themeDescription">@string/theme_flames_description</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/flames</item>
+
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="titleTextColor">?attr/colorPrimary</item>
+
+    </style>
+
+    <!-- The Moonlight theme - similar to the dark Gloom theme, but the colors of the background and the text are a bit easier on the eyes. -->
+    <style name="Theme.Jots.Moonlight" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_moonlight_id</item>
+        <item name="themeIdSku">@string/theme_moonlight_sku</item>
+
+        <item name="themeTitle">@string/theme_moonlight_title</item>
+        <item name="themeDescription">@string/theme_moonlight_description</item>
+
+        <item name="colorPrimary">@color/moonlight_light</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+
+        <item name="colorSecondary">@color/moonlight_dark</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="titleTextColor">?attr/colorPrimary</item>
+        <item name="toolbarIconColor">?attr/colorPrimary</item>
+        <item name="formatBarColor">?attr/colorSecondary</item>
+
+    </style>
+
+    <!-- The Press theme - same as colors as Default, but has a serif font. -->
+    <style name="Theme.Jots.Press" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_press_id</item>
+        <item name="themeIdSku">@string/theme_press_sku</item>
+
+        <item name="themeTitle">@string/theme_press_title</item>
+        <item name="themeDescription">@string/theme_press_description</item>
+
+        <item name="fontFamily">@font/merriweather_light</item>
+
+        <item name="paragraphTextSize">14sp</item>
+        <item name="notePreviewTitleTextSize">18sp</item>
+        <item name="alertDialogTitleTextSize">18sp</item>
+        <item name="contextualHeadingTextSize">20sp</item>
+
+    </style>
+
+    <!-- The Postcard theme - the colors are inspired by pen ink and postcard paper, and the font is handwriting style. -->
+    <style name="Theme.Jots.Postcard" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_postcard_id</item>
+        <item name="themeIdSku">@string/theme_postcard_sku</item>
+
+        <item name="themeTitle">@string/theme_postcard_title</item>
+        <item name="themeDescription">@string/theme_postcard_description</item>
+
+        <item name="colorPrimary">@color/pen_black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+
+        <item name="colorSecondary">@color/paper_white</item>
+
+        <item name="fontFamily">@font/reenie_beanie</item>
+
+        <item name="paragraphTextSize">18sp</item>
+        <item name="headingTextSize">24sp</item>
+        <item name="titleTextSize">26sp</item>
+        <item name="contextualHeadingTextSize">20sp</item>
+        <item name="notePreviewTitleTextSize">22sp</item>
+        <item name="alertDialogTitleTextSize">22sp</item>
+
+    </style>
+
+    <!-- The Pixel theme - black background, bright green heading text (color taken directly from Space Invaders), and a pixel font. -->
+    <style name="Theme.Jots.Pixel" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_pixel_id</item>
+        <item name="themeIdSku">@string/theme_pixel_sku</item>
+
+        <item name="themeTitle">@string/theme_pixel_title</item>
+        <item name="themeDescription">@string/theme_pixel_description</item>
+
+        <item name="fontFamily">@font/vt323</item>
+
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/dark_grey</item>
+
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/grey</item>
+
+        <item name="titleTextColor">@color/space_invaders_green</item>
+        <item name="headingColor">@color/space_invaders_green</item>
+
+        <item name="toolbarIconColor">?attr/colorPrimary</item>
+        <item name="formatBarColor">?attr/colorPrimaryVariant</item>
+
+    </style>
+
+    <!-- The The Daily Jot theme - inspired by old newspapers. -->
+    <style name="Theme.Jots.TheDailyJot" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_thedailyjot_id</item>
+        <item name="themeIdSku">@string/theme_thedailyjot_sku</item>
+
+        <item name="themeTitle">@string/theme_thedailyjot_title</item>
+        <item name="themeDescription">@string/theme_thedailyjot_description</item>
+
+        <item name="colorSecondary">@color/old_newspaper</item>
+
+        <item name="fontFamily">@font/syne_mono</item>
+
+    </style>
+
+    <!-- The Daydream theme - very light blue background on the Amatic font. -->
+    <style name="Theme.Jots.Daydream" parent="Theme.Jots">
+
+        <item name="themeIdAttr">@string/theme_daydream_id</item>
+        <item name="themeIdSku">@string/theme_daydream_sku</item>
+
+        <item name="themeTitle">@string/theme_daydream_title</item>
+        <item name="themeDescription">@string/theme_daydream_description</item>
+
+        <item name="colorSecondary">@color/daydream</item>
+
+        <item name="fontFamily">@font/amatic_sc</item>
+
+        <item name="paragraphTextSize">18sp</item>
+        <item name="headingTextSize">24sp</item>
+        <item name="titleTextSize">26sp</item>
+        <item name="contextualHeadingTextSize">20sp</item>
+        <item name="notePreviewTitleTextSize">22sp</item>
+        <item name="alertDialogTitleTextSize">22sp</item>
+
+    </style>
+
+</resources>
