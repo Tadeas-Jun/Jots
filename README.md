@@ -9,6 +9,7 @@ Please be aware that, as the purpose of this repository is to showcase the code,
 
 ## Themes
 The users of Jots can customize how their app looks using the in-app Theme Store. The app currently offers 18 total themes, including simple color variations, to more complex themes that wholly change the design of the app. Below is the list of the currently available Jots themes:
+
 + **Default** - *The default minimalistic theme you know and love!*
 + **Gloom** - *Do your eyes hurt, or are you just in the mood for something a bit more dark?*
 + **Eledris** - *The perfect black and orange combo! Familiar with our other projects?*
@@ -32,7 +33,7 @@ More Themes might be added in the future.
 Some of the Themes are available to the user by default, while some of them can be purchased via Google Play's In-App Billing system. In future development, some Themes might be made available to the user by other means, such as a referral program.
 
 ## Case study
-If you'd like to learn more about the specifics of Jots' code, please read [the case study](https://www.tadeasjun.com/) on Tadeas' portfolio website.
+The Case Study about this project is **coming soon**.
 
 ## Contact
-If you have any questions about Jots, if you need an Android developer, or if you just want to chat for a while, please feel free to reach out to Tadeas using his portfolio's [contact form](https://www.tadeasjun.com/).
+If you have any questions about Jots, if you need an Android developer, or if you just want to chat for a while, please feel free to reach out to Tadeas using his email tadeas@eledris.com, or on Discord - **Tadeas Salvatore Jun#9537**.
