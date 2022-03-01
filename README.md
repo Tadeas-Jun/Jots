@@ -1,7 +1,7 @@
 # Jots - A Minimalistic Notes Android App
 ✏️ Jots is an open-source minimalistic notes app for Android. It was created by Tadeas Jun in 2021. The app features a minimal UI, which can be personalized via the Themes in the Theme Store of the app.
 
-The app can be downloaded on [Google Play](https://play.google.com/store/apps/details?id=com.eledris.jots).
+The app can be downloaded on Google Play (coming soon).
 
 The main purpose of this repository is to showcase the author's skill in Java and Android, as well as assure users of Jots that their data is safe. In this repo, you can look through the code of Jots and learn how to code similar apps in Android.
 
