@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The toolbar menu in the Note, including the SAVE button. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- The SAVE button. -->
+    <item
+        android:id="@+id/save_note"
+        android:title="@string/note_save"
+        android:icon="@null"
+        app:showAsAction="always"
+        android:onClick="HandleMenuClick"
+    />
+
+</menu>

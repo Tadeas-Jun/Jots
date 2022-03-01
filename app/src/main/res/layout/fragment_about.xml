@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AboutFragment">
+
+    <!-- The container for all the content of the fragment. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- The About the app heading. -->
+        <TextView
+            android:id="@+id/about_app_title"
+            style="@style/Jots.Text.Heading"
+            android:layout_marginTop="30dp"
+            android:text="@string/about_app_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <!-- A text describing the app. -->
+        <TextView
+            android:id="@+id/about_app_text"
+            style="@style/Jots.Text"
+            android:layout_marginTop="20dp"
+            android:text="@string/about_app_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_app_title"
+            />
+
+        <!-- The About the author heading. -->
+        <TextView
+            android:id="@+id/about_author_title"
+            style="@style/Jots.Text.Heading"
+            app:layout_constraintTop_toBottomOf="@id/about_app_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"
+            android:text="@string/about_author_title"
+            />
+
+        <!-- A photo of the author. -->
+        <!-- Checked the image via Accessibility Scanner, as well as several color blindness simulators, the Low Contrast warning seems to be a false positive. -->
+        <ImageView
+            android:id="@+id/about_author_image"
+
+            style="@style/Jots.ProfileImage"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/about_author_image_description"
+
+            android:src="@drawable/profile_tadeas"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_author_title"
+
+            tools:ignore="ImageContrastCheck"
+            />
+
+        <!-- A text describing the author. -->
+        <TextView
+            android:id="@+id/about_author_text"
+            style="@style/Jots.Text"
+            app:layout_constraintTop_toBottomOf="@id/about_author_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp"
+            android:text="@string/about_author_text"
+            />
+
+        <!-- The Contact heading. -->
+        <TextView
+            android:id="@+id/about_contact_title"
+            style="@style/Jots.Text.Heading"
+            app:layout_constraintTop_toBottomOf="@id/about_author_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"
+            android:text="@string/about_contact_title"
+            />
+
+        <!-- A text describing several ways of contacting the author. -->
+        <TextView
+            android:id="@+id/about_contact_text"
+            style="@style/Jots.Text"
+            app:layout_constraintTop_toBottomOf="@id/about_contact_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:text="@string/about_contact_text"
+            android:paddingBottom="50dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

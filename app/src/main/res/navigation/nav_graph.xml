@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesFragment">
+
+    <!-- The homepage fragment. -->
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.eledris.jots.NotesFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_notes"
+        >
+
+        <!-- Homepage -> Note (when a note in the homepage is opened, or a new one is created). -->
+        <action
+            android:id="@+id/action_notesFragment_to_noteFragment"
+            app:destination="@id/noteFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            />
+
+        <!-- Homepage -> About (when the About button in the Drawer menu is clicked). -->
+        <action
+            android:id="@+id/action_notesFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            />
+
+        <!-- Homepage -> Theme store (when the Theme store button in the Drawer menu is clicked). -->
+        <action
+            android:id="@+id/action_notesFragment_to_themeStoreFragment"
+            app:destination="@id/themeStoreFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            />
+
+        <!-- Homepage -> Settings (when the Settings button in the Drawer menu is clicked). -->
+        <action
+            android:id="@+id/action_notesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            />
+
+    </fragment>
+
+    <!-- The Note fragment. -->
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="com.eledris.jots.NoteFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_note"
+        />
+
+    <!-- The About fragment. -->
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.eledris.jots.AboutFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_about"
+        />
+
+    <!-- The Theme store fragment. -->
+    <fragment
+        android:id="@+id/themeStoreFragment"
+        android:name="com.eledris.jots.ThemeStoreFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_theme_store"
+        />
+
+    <!-- The Settings fragment. -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.eledris.jots.SettingsFragment"
+        android:label="@string/app_name"
+        />
+
+</navigation>

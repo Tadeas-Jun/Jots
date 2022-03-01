@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The layout for a Note preview in the list of the user's notes. -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Jots.NotePreview"
+    >
+
+    <!-- The note's title. -->
+    <TextView
+        android:id="@+id/note_title"
+        style="@style/Jots.NotePreview.NoteTitle"
+        android:text="@string/note_untitled"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- The first 30 characters of the note's content. -->
+    <TextView
+        style="@style/Jots.NotePreview.ContentPreview"
+        android:id="@+id/note_contentPreview"
+        app:layout_constraintTop_toBottomOf="@+id/note_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/note_untitled"
+        />
+
+    <!-- The date of the note's last edit. -->
+    <TextView
+        style="@style/Jots.NotePreview.Date"
+        android:id="@+id/note_date"
+        app:layout_constraintTop_toBottomOf="@+id/note_contentPreview"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/note_exampleDate"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

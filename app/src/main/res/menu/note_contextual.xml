@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The menu showing up when a Note is long-clicked on. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- The button to share a note. -->
+    <item android:id="@+id/contextual_share"
+        android:title="@string/note_contexual_share"
+        android:icon="@drawable/ic_baseline_share_24"
+        app:showAsAction="ifRoom"
+        />
+
+    <!-- The button to delete a note. -->
+    <item android:id="@+id/contextual_delete"
+        android:title="@string/note_contexual_delete"
+        android:icon="@drawable/ic_baseline_delete_24"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>

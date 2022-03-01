@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The Drawer menu in the homepage. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/menu_group_drawer">
+
+        <!-- The About button. -->
+        <item
+            android:id="@+id/menu_about"
+            android:title="@string/menu_about"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:onClick="HandleMenuClick"
+            />
+
+        <!-- The Theme store button. -->
+        <item
+            android:id="@+id/menu_themes"
+            android:title="@string/menu_themes"
+            android:icon="@drawable/ic_baseline_palette_24"
+            android:onClick="HandleMenuClick"
+            />
+
+        <!-- The Settings button. -->
+        <item
+            android:id="@+id/menu_settings"
+            android:title="@string/menu_settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:onClick="HandleMenuClick"
+            />
+
+        <!-- The View code button. -->
+        <item
+            android:id="@+id/menu_code"
+            android:title="@string/menu_code"
+            android:icon="@drawable/ic_baseline_code_24"
+            android:onClick="HandleMenuClick"
+            />
+
+    </group>
+
+</menu>

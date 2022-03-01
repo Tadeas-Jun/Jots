@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Duration (in milliseconds) that it takes the Formatting bar in Note to slide up or down when clicked by the user. -->
+    <integer name="toggle_formatting_bar_duration">200</integer>
+
+</resources>

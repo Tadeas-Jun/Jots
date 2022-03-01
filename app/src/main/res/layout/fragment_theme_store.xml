@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ThemeStoreFragment">
+
+    <!-- The container for all the content of the fragment. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- The Theme store title. -->
+        <TextView
+            android:id="@+id/themestore_title"
+            style="@style/Jots.Text.Heading"
+            android:text="@string/themestore_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"/>
+
+        <!-- The text describing the Theme Store. -->
+        <TextView
+            android:id="@+id/about_app_text"
+            style="@style/Jots.Text"
+            android:layout_marginTop="20dp"
+            android:text="@string/themestore_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/themestore_title" />
+
+        <!-- The layout for the individual theme previews. -->
+        <LinearLayout
+            android:id="@+id/themes_layout"
+            app:layout_constraintTop_toBottomOf="@id/about_app_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/Jots.ThemeLayout"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- The main toolbar of the app. -->
+    <style name="Jots.Toolbar" parent="Theme.Jots">
+
+        <item name="android:background">?attr/toolbarBackgroundColor</item>
+        <item name="titleTextColor">?attr/titleTextColor</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:title">@string/app_name</item>
+        <item name="android:navigationIcon">@drawable/ic_baseline_menu_24</item>
+        <item name="android:titleTextAppearance">@style/Jots.Text.Title</item>
+
+    </style>
+
+    <!-- The navigation view displaying all the fragments. -->
+    <style name="Jots.NavigationView" parent="Theme.Jots">
+
+        <item name="itemTextAppearance">@style/Jots.Text</item>
+        <item name="android:background">?attr/itemBackground</item>
+        <item name="itemTextColor">?attr/itemTextColor</item>
+        <item name="itemIconTint">?attr/itemIconTint</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="menu">@menu/side_menu</item>
+
+    </style>
+
+    <!-- The recycler view used to display all the user's notes. -->
+    <style name="Jots.NotesRecyclerView" parent="Theme.Jots">
+
+        <item name="android:animateLayoutChanges">false</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:paddingBottom">100dp</item>
+        <item name="android:clipToPadding">false</item>
+
+    </style>
+
+    <!-- A preview of one note, displaying the note's title, first 30 characters of the content, and the last edited date. -->
+    <style name="Jots.NotePreview" parent="Theme.Jots">
+
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">15dp</item>
+
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:longClickable">true</item>
+
+    </style>
+
+    <!-- region TEXT STYLES -->
+    <!-- The basic text. -->
+    <style name="Jots.Text" parent="Theme.Jots">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:paddingStart">25dp</item>
+        <item name="android:paddingEnd">25dp</item>
+
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+
+        <item name="android:gravity">start</item>
+        <item name="android:textDirection">locale</item>
+
+        <item name="fontFamily">?attr/fontFamily</item>
+        <item name="android:textColor">?attr/mainFontColor</item>
+        <item name="android:textSize">?attr/paragraphTextSize</item>
+
+        <item name="android:textStyle">normal</item>
+
+        <item name="android:clipToPadding">false</item>
+
+    </style>
+
+    <!-- A small variant of the basic text, used as the hint in the Dropdown menu in Settings. -->
+    <style name="Jots.Text.Small">
+
+        <item name="android:textSize">?attr/smallTextSize</item>
+
+    </style>
+
+    <!-- The text for the note title and content. -->
+    <style name="Jots.Text.Note" parent="Jots.Text">
+
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+
+    </style>
+
+    <!-- The text used in the toolbar title.  -->
+    <style name="Jots.Text.Title" parent="Jots.Text">
+
+        <item name="fontFamily">?attr/titleFontFamily</item>
+        <item name="android:textSize">?attr/titleTextSize</item>
+
+    </style>
+
+    <!-- The text used for headings. -->
+    <style name="Jots.Text.Heading" parent="Jots.Text">
+
+        <item name="fontFamily">?attr/headingFontFamily</item>
+        <item name="android:textColor">?attr/headingColor</item>
+        <item name="android:textSize">?attr/headingTextSize</item>
+        <item name="android:gravity">center_horizontal</item>
+
+    </style>
+
+    <!-- The text used in the popup menu when a user longclicks on a Note in the note list. -->
+    <style name="Jots.Text.ContextualHeading" parent="Jots.Text">
+
+        <item name="android:textSize">?attr/contextualHeadingTextSize</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <!-- The small text in the collapsed Formatting bar. -->
+    <style name="Jots.Text.FormattingBar" parent="Jots.Text">
+
+        <item name="android:gravity">end</item>
+        <item name="android:textSize">?attr/smallTextSize</item>
+        <item name="android:layout_marginBottom">2dp</item>
+
+    </style>
+
+    <!-- The text used for the Create new text... button in the NotesFragment. -->
+    <style name="Jots.Text.Button" parent="Jots.Text">
+
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+
+        <item name="android:background">?attr/selectableItemBackground</item>
+
+    </style>
+    <!-- endregion TEXT STYLES -->
+
+    <!-- The buttons in the Formatting bar. -->
+    <style name="Jots.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:minWidth">32dp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="iconTint">?attr/formatBarIconsColor</item>
+        <item name="strokeColor">?attr/formatBarIconsColor</item>
+
+    </style>
+
+    <!-- region INPUT FIELDS -->
+    <!-- The layout for the title and content text fields in the note. -->
+    <style name="Jots.TextInputLayout" parent="Theme.Jots">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
+
+        <item name="boxBackgroundColor">?attr/colorSecondary</item>
+        <item name="boxBackgroundMode">none</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="hintEnabled">false</item>
+
+    </style>
+
+    <!-- The layout for the title text field of the note - inheriting from Jots.TextInputLayout. -->
+    <style name="Jots.TextInputLayout.Title" parent="Jots.TextInputLayout">
+
+        <item name="counterEnabled">true</item>
+        <item name="counterMaxLength">30</item>
+        <item name="counterTextColor">?attr/mainFontColor</item>
+        <item name="boxBackgroundMode">filled</item>
+        <item name="android:elevation">4dp</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+
+    </style>
+
+    <!-- The edit text field for the title and content of the note. -->
+    <style name="Jots.TextInputEdit" parent="Theme.Jots">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:inputType">textMultiLine</item>
+
+        <item name="android:textDirection">locale</item>
+
+        <item name="android:overScrollMode">always</item>
+        <item name="android:scrollbarStyle">insideInset</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:textAppearance">@style/Jots.Text.Note</item>
+        <item name="android:textColor">?attr/mainFontColor</item>
+        <item name="android:textColorHint">?attr/editTextHintColor</item>
+        <item name="fontFamily">?attr/fontFamily</item>
+
+    </style>
+
+    <!-- A separate style to ensure the content edit box has a higher height even when it's empty - makes it easier to click on it in an empty note. -->
+    <style name="Jots.TextInputEdit.Content" parent="Jots.TextInputEdit">
+
+        <item name="android:gravity">start</item>
+        <item name="android:minHeight">250dp</item>
+
+    </style>
+
+    <!-- The edit text field for the title. -->
+    <style name="Jots.TextInputEdit.Title" parent="Jots.TextInputEdit">
+
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxLength">30</item>
+
+    </style>
+
+    <!-- The dropdown menu used in the Settings. -->
+    <style name="Jots.DropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+
+        <item name="boxStrokeColor">?attr/colorPrimary</item>
+        <item name="materialThemeOverlay">@style/Jots.ThemeOverlay.ExposedDropdownMenu</item>
+        <item name="boxBackgroundColor">?attr/colorSecondary</item>
+        <item name="hintTextAppearance">@style/Jots.Text.Small</item>
+        <item name="android:textColorHint">?attr/mainFontColor</item>
+        <item name="endIconTint">?attr/mainFontColor</item>
+
+    </style>
+
+    <!-- The dropdown menu textview. -->
+    <style name="Jots.DropdownMenu.AutoComplete" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        
+        <item name="android:textDirection">locale</item>
+
+        <item name="android:inputType">none</item>
+
+        <item name="android:textColor">?attr/mainFontColor</item>
+        <item name="android:focusable">false</item>
+
+    </style>
+
+    <!-- The item of the expanded dropdown menu. -->
+    <style name="Jots.DropdownMenu.Item" parent="Theme.Jots">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:textDirection">locale</item>
+
+        <item name="android:padding">16dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+
+        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>
+
+    </style>
+
+
+    <style name="Jots.ThemeOverlay.ExposedDropdownMenu" parent="">
+
+        <item name="android:textAppearance">@style/Jots.Text</item>
+        <item name="colorSurface">?attr/colorSecondary</item>
+
+    </style>
+
+    <!-- region SWITCHES -->
+    <!-- The switch button used in the Settings. -->
+    <style name="Jots.SwitchButton" parent="Widget.AppCompat.CompoundButton.Switch">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+
+        <item name="android:textAppearance">@style/Jots.Text</item>
+        <item name="android:textColor">?attr/mainFontColor</item>
+
+        <item name="android:textDirection">locale</item>
+
+        <item name="materialThemeOverlay">@style/Jots.ThemeOverlay.Switch</item>
+
+    </style>
+
+    <!-- The theme overlay for the Switch button, ensuring it has the correct toggled color. -->
+    <style name="Jots.ThemeOverlay.Switch" parent="">
+
+        <item name="colorSecondary">?attr/toggledSwitchColor</item>
+
+    </style>
+    <!-- endregion SWITCHES -->
+
+    <!-- endregion INPUT FIELDS -->
+
+    <!-- The author's profile image in the About section. -->
+    <style name="Jots.ProfileImage" parent="Theme.Jots">
+
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+
+        <item name="android:background">@drawable/profile_background</item>
+        <item name="android:scaleType">fitCenter</item>
+
+    </style>
+
+    <!-- region THEMES -->
+    <!-- The layout for the individual Theme previews in the Theme Store. -->
+    <style name="Jots.ThemeLayout" parent="Theme.Jots">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+
+    </style>
+
+    <!-- The preview of a Theme in the Theme Store. -->
+    <style name="Jots.ThemePreview" parent="Theme.Jots">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:background">@drawable/theme_preview_background</item>
+
+        <item name="android:layout_marginTop">30dp</item>
+
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">50dp</item>
+        <item name="android:paddingEnd">15dp</item>
+
+        <item name="elevation">4dp</item>
+
+    </style>
+
+    <!-- The status icon of a Theme preview - either a padlock for locked, or a checkmark for active. -->
+    <style name="Jots.ThemeStatusIcon" parent="Theme.Jots">
+
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">?attr/colorPrimary</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+
+    </style>
+    <!-- endregion THEMES -->
+
+    <!-- region ALERT DIALOG -->
+    <!-- The style for the SAVE/DISCARD Alert Dialog, applies in the Theme using the materialAlertDialogTheme attribute. -->
+    <style name="Jots.AlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+
+        <item name="android:background">?attr/colorSecondary</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/Jots.AlertDialog.Text.Title</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Jots.AlertDialog.Text</item>
+
+    </style>
+
+    <!-- The main text of the dialogue - @string/note_exit_description. -->
+    <style name="Jots.AlertDialog.Text" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+
+        <item name="android:fontFamily">?attr/fontFamily</item>
+        <item name="android:textColor">?attr/mainFontColor</item>
+
+    </style>
+
+    <!-- The title of the dialogue - @string/note_exit_title. -->
+    <style name="Jots.AlertDialog.Text.Title" parent="Jots.AlertDialog.Text">
+
+        <item name="android:textColor">?attr/headingColor</item>
+        <item name="android:textSize">?attr/alertDialogTitleTextSize</item>
+
+    </style>
+    <!-- endregion ALERT DIALOG -->
+
+    <!-- region FORMATTING BAR -->
+    <!-- The collapsed formatting bar. -->
+    <style name="Jots.Formatting" parent="Theme.Jots">
+
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="paddingStart">10dp</item>
+        <item name="paddingEnd">10dp</item>
+        <item name="android:background">?attr/formatBarColor</item>
+        <item name="android:gravity">end</item>
+        <item name="android:alpha">0.7</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+
+    </style>
+
+    <!-- The expanded formatting bar, inheriting most features from the collapsed version. -->
+    <style name="Jots.Formatting.Expanded" parent="Jots.Formatting">
+
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:gravity">start</item>
+
+    </style>
+    <!-- endregion FORMATTING BAR -->
+
+    <!-- region NOTE PREVIEW -->
+    <!-- The title of the Note preview in the list of user's Notes. -->
+    <style name="Jots.NotePreview.NoteTitle" parent="Jots.Text">
+
+        <item name="android:textSize">?attr/notePreviewTitleTextSize</item>
+
+    </style>
+
+    <!-- The content of the Note preview. -->
+    <style name="Jots.NotePreview.ContentPreview" parent="Jots.Text">
+
+        <item name="android:maxLines">1</item>
+
+    </style>
+
+    <!-- The date of the last edit in the Note preview. -->
+    <style name="Jots.NotePreview.Date" parent="Jots.Text">
+
+        <item name="android:alpha">0.7</item>
+
+    </style>
+    <!-- endregion NOTE PREVIEW -->
+
+</resources>

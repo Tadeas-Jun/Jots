@@ -1,0 +1,160 @@
+<resources>
+
+    <string name="app_name">Jots</string>
+
+    <!-- region DRAWER MENU -->
+    <string name="menu_about">About</string>
+    <string name="menu_themes">Theme store</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_code">View code</string>
+    <!-- endregion DRAWER MENU -->
+
+    <string name="notes_createNew">Create new note…</string>
+    <string name="notes_deleted">Goodbye, note…</string>
+    <string name="note_contexual_delete">Delete</string>
+    <string name="note_contexual_share">Share note</string>
+
+    <string name="note_untitled">Untitled note</string>
+    <string name="note_exampleDate">1/1/1990</string>
+
+    <string name="note_emptyTitle">Your awesome Jot title</string>
+    <string name="note_emptyContent">Jot your thoughts down…</string>
+    <string name="note_formatting">Formatting</string>
+    <string name="note_formatting_noselection">Select some text to format it.</string>
+    <string name="note_save">Save</string>
+
+    <string name="note_exit_title">Leaving already?</string>
+    <string name="note_exit_description">Would you like to save this note?</string>
+    <string name="note_exit_discard">Discard</string>
+    <string name="note_exit_save">@string/note_save</string>
+    <string name="note_exit_cancel">Cancel</string>
+
+    <string name="error_keyset_creation">There was an error while creating the cipher keyset. Please contact tadeas@eledris.com.</string>
+
+    <!-- region ABOUT -->
+    <string name="about_app_title">About the app</string>
+    <string name="about_app_text">Jots is an open-source minimalistic notes app. It was created by Tadeas Jun in 2021. The app features a minimal UI, which can be personalized via the Themes in the Theme Store of the app. \nIf you\'re a developer, you can view the complete code of Jots in its GitHub repository, available via the main menu of the app. As the main purpose of the app being open-source is to showcase the author\'s experience in Android development, the GitHub repo is not accepting any pull requests, and does not allow redistribution and/or modification.</string>
+    <string name="about_author_image_description">A portrait photo of Tadeas, the app\'s author. He is wearing a coat. The background of the photo is the bisexual pride flag.</string>
+    <string name="about_author_title">About the author</string>
+    <string name="about_author_text">Tadeas Jun is a freelance developer and a writer. He created the <b>Art Prompts</b> series of projects, including an Android app, a Discord bot, a newsletter, and a Twitch bot. On his blog, <b>Eledris</b>, he writes about worldbuilding and creative writing. \nTadeas\' minor projects include the Figma plugin <b>Pride Flags &amp; Gradients</b>, the trivia Discord bot <b>DisTriv</b>, and a work-in-progress blog about LGBTQ oppression.</string>
+    <string name="about_contact_title">Contact</string>
+    <string name="about_contact_text">To reach out to Tadeas, please feel free to email <b>tadeas@eledris.com</b>. \nFor a less formal conversation, Tadeas is usually online on Discord under the tag <b>Tadeas Salvatore Jun#9537</b> - send him a friend request! \nIf you\'d like to leave some feedback on this app, please send us a review on Google Play.</string>
+    <!-- endregion ABOUT -->
+
+    <!-- region THEME STORE -->
+    <string name="themestore_title">Theme store</string>
+    <string name="themestore_text">Change the theme of your Jots or get a new theme!</string>
+    <string name="themestore_checkmarkicon_description">A checkmark icon, signalling that this theme is currently selected.</string>
+    <string name="themestore_padlockicon_description">A padlock icon, signalling that this theme is not unlocked yet.</string>
+
+    <string name="purchase_billingdisconnects">There has been an error loading the In-App Purchases. If you want to buy a theme, please restart the app or contact tadeas@eledris.com for help.</string>
+    <string name="purchase_canceled">You canceled the purchase - the Theme wasn\'t unlocked.</string>
+    <string name="purchase_error">There has been an error in the purchase. No money was charged. Please try again later or contact tadeas@eledris.com for help.</string>
+    <string name="purchase_pending">Your purchase is currently pending. This might take up to several hours.</string>
+    <string name="purchase_success">Thank you for purchasing the premium theme!</string>
+    <!-- endregion THEME STORE -->
+
+    <!-- region SETTINGS -->
+    <string name="settings_title">Settings</string>
+
+    <string name="settings_dateformat">Date format</string>
+
+    <string name="settings_hints">Show hint text in empty note</string>
+    <string name="settings_titledivider">Show divider below note title</string>
+    <string name="settings_hidetoolbar">Hide toolbar title while in note</string>
+    <!-- endregion SETTINGS -->
+
+    <!-- region THEMES -->
+    <string name="theme_default_id">Theme.Jots</string>
+    <string name="theme_default_title">Default</string>
+    <string name="theme_default_description">The default minimalistic theme you know and love!</string>
+
+    <string name="theme_bold_id">Theme.Jots.Bold</string>
+    <string name="theme_bold_title">Bold</string>
+    <string name="theme_bold_description">For when you need your text to pop out a bit more.</string>
+
+    <string name="theme_gloom_id">Theme.Jots.Gloom</string>
+    <string name="theme_gloom_title">Gloom</string>
+    <string name="theme_gloom_description">Do your eyes hurt, or are you just in the mood for something a bit more dark?</string>
+
+    <string name="theme_eledris_id">Theme.Jots.Eledris</string>
+    <string name="theme_eledris_title">Eledris</string>
+    <string name="theme_eledris_description">The perfect black and orange combo! Familiar with our other projects?</string>
+
+    <string name="theme_rose_id">Theme.Jots.Rose</string>
+    <string name="theme_rose_title">Rose</string>
+    <string name="theme_rose_description">It is the time you have wasted for your note that makes your note so important.</string>
+    <string name="theme_rose_sku">theme_rose</string>
+
+    <string name="theme_ripelemon_id">Theme.Jots.RipeLemon</string>
+    <string name="theme_ripelemon_title">Ripe Lemon</string>
+    <string name="theme_ripelemon_description">A touch of yellow to make your notes shine like the summer Sun.</string>
+    <string name="theme_ripelemon_sku">theme_ripelemon</string>
+
+    <string name="theme_clearlake_id">Theme.Jots.ClearLake</string>
+    <string name="theme_clearlake_title">Clear Lake</string>
+    <string name="theme_clearlake_description">You can almost see your reflection in the pleasant light blue.</string>
+    <string name="theme_clearlake_sku">theme_clearlake</string>
+
+    <string name="theme_deepsea_id">Theme.Jots.DeepSea</string>
+    <string name="theme_deepsea_title">Deep Sea</string>
+    <string name="theme_deepsea_description">What wonders can be found in the deep, deep blue?</string>
+    <string name="theme_deepsea_sku">theme_deepsea</string>
+
+    <string name="theme_olivine_id">Theme.Jots.Olivine</string>
+    <string name="theme_olivine_title">Olivine</string>
+    <string name="theme_olivine_description">Ideal for sauna stoves. And making notes look good.</string>
+    <string name="theme_olivine_sku">theme_olivine</string>
+
+    <string name="theme_rosequartz_id">Theme.Jots.RoseQuartz</string>
+    <string name="theme_rosequartz_title">Rose Quartz</string>
+    <string name="theme_rosequartz_description">The blushing hue brings out the beauty of your thoughts.</string>
+    <string name="theme_rosequartz_sku">theme_rosequartz</string>
+
+    <string name="theme_crystal_id">Theme.Jots.Crystal</string>
+    <string name="theme_crystal_title">Crystal</string>
+    <string name="theme_crystal_description">Let your notes carry good fortune.</string>
+    <string name="theme_crystal_sku">theme_crystal</string>
+
+    <string name="theme_flames_id">Theme.Jots.Flames</string>
+    <string name="theme_flames_title">Flames</string>
+    <string name="theme_flames_description">Look deep into the crackling fire, and reflect on your thoughts.</string>
+    <string name="theme_flames_sku">theme_flames</string>
+
+    <string name="theme_moss_id">Theme.Jots.Moss</string>
+    <string name="theme_moss_title">Moss</string>
+    <string name="theme_moss_description">Feel the life under your feet.</string>
+    <string name="theme_moss_sku">theme_moss</string>
+
+    <string name="theme_moonlight_id">Theme.Jots.Moonlight</string>
+    <string name="theme_moonlight_title">Moonlight</string>
+    <string name="theme_moonlight_description">Moonlight drowns out all but the brightest stars.</string>
+    <string name="theme_moonlight_sku">theme_moonlight</string>
+
+    <string name="theme_press_id">Theme.Jots.Press</string>
+    <string name="theme_press_title">Press</string>
+    <string name="theme_press_description">For the modern business man on the road.</string>
+    <string name="theme_press_sku">theme_press</string>
+
+    <string name="theme_postcard_id">Theme.Jots.Postcard</string>
+    <string name="theme_postcard_title">Postcard</string>
+    <string name="theme_postcard_description">Oh, the places you\'ll go…</string>
+    <string name="theme_postcard_sku">theme_postcard</string>
+
+    <string name="theme_pixel_id">Theme.Jots.Pixel</string>
+    <string name="theme_pixel_title">Pixel</string>
+    <string name="theme_pixel_description">Party like it\'s 1978!</string>
+    <string name="theme_pixel_sku">theme_pixel</string>
+
+    <string name="theme_thedailyjot_id">Theme.Jots.TheDailyJot</string>
+    <string name="theme_thedailyjot_title">The Daily Jot</string>
+    <string name="theme_thedailyjot_description">Extra, extra!</string>
+    <string name="theme_thedailyjot_sku">theme_thedailyjot</string>
+
+    <string name="theme_daydream_id">Theme.Jots.Daydream</string>
+    <string name="theme_daydream_title">Daydream</string>
+    <string name="theme_daydream_description">A series of pleasant thoughts that distract one\'s attention from the present.</string>
+    <string name="theme_daydream_sku">theme_daydream</string>
+    <!-- endregion THEMES -->
+
+</resources>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".NoteFragment">
+
+    <!-- The container for both the expanded and collapsed versions of the Formatting bar layouts. -->
+    <FrameLayout
+        android:id="@+id/note_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- The expanded version of the Formatting bar, including several formatting buttons. -->
+        <LinearLayout
+            android:id="@+id/note_tools_expanded"
+            style="@style/Jots.Formatting.Expanded">
+
+            <!-- Bold button; <b>text</b> -->
+            <Button
+                android:id="@+id/formatting_button_bold"
+                style="@style/Jots.OutlinedButton"
+                app:icon="@drawable/ic_baseline_format_bold_24"/>
+
+            <!-- Italics button; <i>text</i> -->
+            <Button
+                android:id="@+id/formatting_button_italics"
+                style="@style/Jots.OutlinedButton"
+                app:icon="@drawable/ic_baseline_format_italic_24"/>
+
+            <!-- Underline button; <u>text</u> -->
+            <Button
+                android:id="@+id/formatting_button_underline"
+                style="@style/Jots.OutlinedButton"
+                app:icon="@drawable/ic_baseline_format_underlined_24"/>
+
+            <!-- Strikethrough button; <del>text</del> -->
+            <Button
+                android:id="@+id/formatting_button_strikethrough"
+                style="@style/Jots.OutlinedButton"
+                app:icon="@drawable/ic_baseline_format_strikethrough_24"/>
+
+            <!-- A More button that can be used to implement more formatting options in the future.
+            <Button
+                android:id="@+id/formatting_button_more"
+                style="@style/Jots.OutlinedButton"
+                app:icon="@drawable/ic_baseline_more_horiz_24"/>
+            -->
+
+        </LinearLayout>
+
+        <!-- The collapsed version of the Formatting, including some text and an arrow icon. -->
+        <!-- Using a compound drawable here would be needlessly complicated code, as the ImageView requires too precisely controlled atrributes in this case. -->
+        <LinearLayout
+            tools:ignore="UseCompoundDrawables"
+            android:id="@+id/note_tools"
+            style="@style/Jots.Formatting"
+            >
+
+            <!-- The text on the Formatting bar. -->
+            <TextView
+                android:layout_height="match_parent"
+                style="@style/Jots.Text.FormattingBar"
+                android:text="@string/note_formatting"
+                />
+
+            <!-- The arrow image on the Formatting bar. -->
+            <!-- This image does not need a content description, as it is purely decorative. -->
+            <ImageView
+                tools:ignore="ContentDescription"
+                android:layout_height="24dp"
+                android:layout_width="24dp"
+                android:paddingBottom="20dp"
+                android:background="@drawable/ic_baseline_expand_more_24"
+                android:backgroundTint="?attr/colorPrimary"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Scrollview for the Note's title and content edit text boxes - since the user decides the content of these boxes, the scrollview is required in case they write content larger than the size of the screen. -->
+    <ScrollView
+        android:id="@+id/note_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/note_toolbar">
+
+        <!-- A container for the title and content edit text boxes. -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp">
+
+            <!-- The Note's title text input. -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/note_title_inputLayout"
+                style="@style/Jots.TextInputLayout.Title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/note_title_editText"
+                    style="@style/Jots.TextInputEdit.Title"
+                    android:hint="@string/note_emptyTitle" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- The Note's content text input. -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/note_content_inputLayout"
+                style="@style/Jots.TextInputLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/note_title_inputLayout"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/note_content_editText"
+                    style="@style/Jots.TextInputEdit.Content"
+                    android:hint="@string/note_emptyContent"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
