@@ -25,8 +25,11 @@ public class JotsRecyclerViewAdapter extends RecyclerView.Adapter<JotsRecyclerVi
     private final LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
+    private Context context;
+
     // Pass data into the constructor.
     JotsRecyclerViewAdapter(Context context, List<Note> data) {
+        this.context = context;
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
@@ -61,6 +64,11 @@ public class JotsRecyclerViewAdapter extends RecyclerView.Adapter<JotsRecyclerVi
         Date date = mData.get(position).lastEdited;
         DateFormat dateFormat = new SimpleDateFormat(MainActivity.selectedDateFormat, Locale.US);
         holder.noteDate.setText(dateFormat.format(date));
+
+        // Hide the content preview and date if the hideContentPreview setting is enabled.
+        boolean hideContentPreview = MainActivity.sharedPreferences.getBoolean("settings_hidecontentpreview",  context.getResources().getBoolean(R.bool.settings_hideContentPreview_defaultValue));
+        holder.noteContentPreview.setVisibility(hideContentPreview ? View.GONE : View.VISIBLE);
+        holder.noteDate.setVisibility(hideContentPreview ? View.GONE : View.VISIBLE);
 
     }
 

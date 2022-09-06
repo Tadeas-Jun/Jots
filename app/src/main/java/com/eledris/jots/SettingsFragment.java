@@ -77,6 +77,10 @@ public class SettingsFragment extends Fragment {
         SwitchMaterial toolbarSwitch = attachedView.findViewById(R.id.settings_switch_toolbar);
         SetupSwitch(toolbarSwitch, "settings_hidetoolbartitle", getResources().getBoolean(R.bool.settings_hideToolbarTitle_defaultValue));
 
+        // Set up switch button for turning on/off content preview in homepage.
+        SwitchMaterial contentPreviewSwitch = attachedView.findViewById(R.id.settings_switch_contentpreview);
+        SetupSwitch(contentPreviewSwitch, "settings_hidecontentpreview", getResources().getBoolean(R.bool.settings_hideContentPreview_defaultValue));
+
     }
 
     // Set up individual switch but the button, the named of the setting sharedPreference, and the default value boolean.

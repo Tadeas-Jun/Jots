@@ -62,6 +62,7 @@
     <string name="settings_hints">Show hint text in empty note</string>
     <string name="settings_titledivider">Show divider below note title</string>
     <string name="settings_hidetoolbar">Hide toolbar title while in note</string>
+    <string name="settings_hidecontentpreview">Hide note preview and date</string>
     <!-- endregion SETTINGS -->
 
     <!-- region THEMES -->
