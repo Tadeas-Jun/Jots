@@ -5,5 +5,6 @@
     <bool name="settings_hints_defaultValue">true</bool>
     <bool name="settings_titleDivider_defaultValue">true</bool>
     <bool name="settings_hideToolbarTitle_defaultValue">false</bool>
+    <bool name="settings_hideContentPreview_defaultValue">false</bool>
 
 </resources>
