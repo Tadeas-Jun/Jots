@@ -36,4 +36,4 @@ Some of the Themes are available to the user by default, while some of them can 
 The Case Study about this project is **coming soon**.
 
 ## Contact
-If you have any questions about Jots, if you need an Android developer, or if you just want to chat for a while, please feel free to reach out to Tadeas using his email contact@tadeasjun.com, or on Discord - **Tadeas Salvatore Jun#9537**.
+If you have any questions about Jots, if you need an Android developer, or if you just want to chat for a while, please feel free to reach out to Tadeas using his email contact@tadeasjun.com, or on Discord - **@tadeasjun**.
